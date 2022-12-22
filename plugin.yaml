@@ -1,0 +1,4 @@
+name: "safe-install"
+usage: "helm safe-install <same flags as helm install>"
+description: "Run preflight tests on the chart using kubectl preflight before installing the chart"
+command: $HELM_PLUGIN_DIR/scripts/safe-install.sh
