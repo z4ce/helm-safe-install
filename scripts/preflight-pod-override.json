@@ -1,0 +1,4 @@
+[
+  { "op": "add", "path": "/spec/containers/0/volumeMounts", "value": [ { "name": "preflights", "mountPath": "/preflights"} ] },
+  { "op": "add", "path": "/spec/volumes", "value": [ { "name": "preflights", "configMap" : { "name": "preflight-config"} } ] }
+]
