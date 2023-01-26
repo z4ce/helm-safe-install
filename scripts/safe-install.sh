@@ -1,5 +1,5 @@
 #!/bin/bash
-echo The plugin is located in: \"$HELM_PLUGIN_DIR\" and its name is: \"$HELM_PLUGIN_NAME\"
+#echo The plugin is located in: \"$HELM_PLUGIN_DIR\" and its name is: \"$HELM_PLUGIN_NAME\"
 OUTPUT_TEMP="$(mktemp)"
 PREFLT_MANIFEST="$(mktemp)"
 ${HELM_BIN} template "$@" --set-string generatePreflights=true | yq e '. | select(.kind == "Preflight")' > ${PREFLT_MANIFEST}
